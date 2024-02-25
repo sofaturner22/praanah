@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/homepage.css') }}">
+    <script src="https://kit.fontawesome.com/fd538e397c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li> <a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Register</a></li>
+                    
+                </ul>
+            
+                </nav>
+                <div class="headertext">
+                    <p>The life saver</p>
+                    <h1>Praanah</h1>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                            <h1 class="subtitle">About </h1>
+                            <p>Praanah is a website for donating and requesting blood. It matches recipients with nearest donors and assigns rewards to promote donation.
+                            </p>
+
+
+                            <div class="tabtitles">
+                                <p class="tab-links active-link" onclick="opentab('Donors')">Donors</p>
+                                <p class="tab-links" onclick="opentab('Recipients')">Recipients</p>
+                                <p class="tab-links" onclick="opentab('Bloodbanks')">Bloodbanks and Hospitals</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="Donors">
+                                <ul>
+                                    <li>Donor users can accept the messege request from the other users .</li>
+                                    <li>The donor can achieve badges and rewards by donating blood .</li>
+                                </ul> 
+                            </div>
+                            <div class="tab-contents" id="Recipients">
+
+                                <ul>
+                                    <li>Donors have to first regester at Praanah wesite.</li>
+                                    <li>They can send requests to other users for the required blood group. </li>
+            
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="Bloodbanks">
+                                <ul>
+                                    <li>Bloodbanks and hospitals can register through the website and sent emergency blood requesr based on their urgency . </li>
+                            
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div id="services">
+            <div class="container">
+                <h1 class="subtitle">Our Services</h1>
+                <div class="services-list">
+                    <div>
+                    
+                        <h2>Blood Donation Camp.</h2>
+                        <p> We collaborate with colleges, corporates,to organize innovative and engaging blood donation camps end to end.</p>
+                    </div>
+                    <div>
+                        <h2>Awareness Session</h2>
+                        <p>  Street plays, competitions, and sessions - targeted at inspiring people, especially the first timers, to come out and donate blood.</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="subtitle ">Contact Us</h1>
+                        <p><i class="fa-regular fa-paper-plane"></i>praanahlifesaver@gmail.com</p>
+                        <p><i class="fa-solid fa-phone-volume"></i>79346576774</p>
+                        <div class="social-icons">
+                         <a href= ""><i class="fa-brands fa-instagram"></i></a>   
+                         <a href=""><i class="fa-brands fa-linkedin"></i></a> 
+                         <a href=""><i class="fa-brands fa-twitter"></i></a> 
+                
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>copyright @ Praanah<i class="fa-solid fa-heart"></i></p>
+
+            </div>
+        </div>
+
+        <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+        </script>
+        
+        
+    
+</body>
+</html>
